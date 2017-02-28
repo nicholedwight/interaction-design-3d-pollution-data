@@ -21,6 +21,15 @@ var mouseXOnMouseDown = 0;
 var windowHalfX = window.innerWidth / 2;
 var windowHalfY = window.innerHeight / 2;
 
+// COLOURS
+var navy = 0x59569d;
+var midnight = 0x38477e;
+var grape = 0x9a50a5;
+var annoyingBarbie = 0xf25292;
+var salmon = 0xf87c87;
+var peach = 0xfca095;
+var sand = 0xfcc396;
+
 function init() {
 
 	container = document.createElement( 'div' );
