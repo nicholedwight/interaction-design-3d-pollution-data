@@ -1,0 +1,972 @@
+{
+    "accessors": {
+        "accessor_160": {
+            "bufferView": "bufferView_202",
+            "byteOffset": 0,
+            "byteStride": 2,
+            "componentType": 5123,
+            "count": 1470,
+            "max": [
+                458
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        },
+        "accessor_163": {
+            "bufferView": "bufferView_202",
+            "byteOffset": 2940,
+            "byteStride": 2,
+            "componentType": 5123,
+            "count": 24,
+            "max": [
+                1115
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        },
+        "accessor_166": {
+            "bufferView": "bufferView_202",
+            "byteOffset": 2988,
+            "byteStride": 2,
+            "componentType": 5123,
+            "count": 12372,
+            "max": [
+                4285
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        },
+        "accessor_169": {
+            "bufferView": "bufferView_202",
+            "byteOffset": 27732,
+            "byteStride": 2,
+            "componentType": 5123,
+            "count": 1896,
+            "max": [
+                10179
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        },
+        "accessor_172": {
+            "bufferView": "bufferView_202",
+            "byteOffset": 31524,
+            "byteStride": 2,
+            "componentType": 5123,
+            "count": 48,
+            "max": [
+                11019
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        },
+        "accessor_175": {
+            "bufferView": "bufferView_202",
+            "byteOffset": 31620,
+            "byteStride": 2,
+            "componentType": 5123,
+            "count": 24,
+            "max": [
+                11051
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        },
+        "accessor_178": {
+            "bufferView": "bufferView_202",
+            "byteOffset": 31668,
+            "byteStride": 2,
+            "componentType": 5123,
+            "count": 24,
+            "max": [
+                11073
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        },
+        "accessor_181": {
+            "bufferView": "bufferView_202",
+            "byteOffset": 31716,
+            "byteStride": 2,
+            "componentType": 5123,
+            "count": 60,
+            "max": [
+                11105
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        },
+        "accessor_184": {
+            "bufferView": "bufferView_202",
+            "byteOffset": 31836,
+            "byteStride": 2,
+            "componentType": 5123,
+            "count": 24,
+            "max": [
+                11145
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        },
+        "accessor_187": {
+            "bufferView": "bufferView_202",
+            "byteOffset": 31884,
+            "byteStride": 2,
+            "componentType": 5123,
+            "count": 36,
+            "max": [
+                11167
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        },
+        "accessor_190": {
+            "bufferView": "bufferView_202",
+            "byteOffset": 31956,
+            "byteStride": 2,
+            "componentType": 5123,
+            "count": 24,
+            "max": [
+                11195
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        },
+        "accessor_193": {
+            "bufferView": "bufferView_202",
+            "byteOffset": 32004,
+            "byteStride": 2,
+            "componentType": 5123,
+            "count": 2304,
+            "max": [
+                11815
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        },
+        "accessor_196": {
+            "bufferView": "bufferView_202",
+            "byteOffset": 36612,
+            "byteStride": 2,
+            "componentType": 5123,
+            "count": 2112,
+            "max": [
+                13405
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        },
+        "accessor_198": {
+            "bufferView": "bufferView_203",
+            "byteOffset": 0,
+            "byteStride": 12,
+            "componentType": 5126,
+            "count": 14348,
+            "max": [
+                0.158277,
+                -0.00384623,
+                0.0067727
+            ],
+            "min": [
+                0.0172698,
+                -0.158686,
+                0
+            ],
+            "type": "VEC3"
+        },
+        "accessor_200": {
+            "bufferView": "bufferView_203",
+            "byteOffset": 172176,
+            "byteStride": 12,
+            "componentType": 5126,
+            "count": 14348,
+            "max": [
+                0.999999,
+                0.999996,
+                1
+            ],
+            "min": [
+                -1,
+                -0.999998,
+                -1
+            ],
+            "type": "VEC3"
+        }
+    },
+    "animations": {},
+    "asset": {
+        "generator": "collada2gltf@6779c094d694e951beeb1012d03d4faa1edb0ddf",
+        "premultipliedAlpha": true,
+        "profile": {
+            "api": "WebGL",
+            "version": "1.0.2"
+        },
+        "version": "1.0.1"
+    },
+    "bufferViews": {
+        "bufferView_202": {
+            "buffer": "Bristol2-5",
+            "byteLength": 40836,
+            "byteOffset": 0,
+            "target": 34963
+        },
+        "bufferView_203": {
+            "buffer": "Bristol2-5",
+            "byteLength": 344352,
+            "byteOffset": 40836,
+            "target": 34962
+        }
+    },
+    "buffers": {
+        "Bristol2-5": {
+            "byteLength": 385188,
+            "type": "arraybuffer",
+            "uri": "Bristol2-5.bin"
+        }
+    },
+    "cameras": {
+        "Camera-camera": {
+            "name": "Camera",
+            "perspective": {
+                "aspectRatio": 1.77778,
+                "yfov": 0.482375,
+                "zfar": 100,
+                "znear": 0.1
+            },
+            "type": "perspective"
+        }
+    },
+    "extensionsUsed": [
+        "KHR_materials_common"
+    ],
+    "materials": {
+        "SVGMat_001-effect": {
+            "extensions": {
+                "KHR_materials_common": {
+                    "doubleSided": false,
+                    "jointCount": 0,
+                    "technique": "PHONG",
+                    "transparent": false,
+                    "values": {
+                        "ambient": [
+                            0,
+                            0,
+                            0,
+                            1
+                        ],
+                        "diffuse": [
+                            0.887923,
+                            0.0843762,
+                            0.287441,
+                            1
+                        ],
+                        "emission": [
+                            0,
+                            0,
+                            0,
+                            1
+                        ],
+                        "shininess": 50,
+                        "specular": [
+                            0.5,
+                            0.5,
+                            0.5,
+                            1
+                        ]
+                    }
+                }
+            },
+            "name": "SVGMat_001"
+        },
+        "SVGMat_002-effect": {
+            "extensions": {
+                "KHR_materials_common": {
+                    "doubleSided": false,
+                    "jointCount": 0,
+                    "technique": "PHONG",
+                    "transparent": false,
+                    "values": {
+                        "ambient": [
+                            0,
+                            0,
+                            0,
+                            1
+                        ],
+                        "diffuse": [
+                            0.938686,
+                            0.201556,
+                            0.242281,
+                            1
+                        ],
+                        "emission": [
+                            0,
+                            0,
+                            0,
+                            1
+                        ],
+                        "shininess": 50,
+                        "specular": [
+                            0.5,
+                            0.5,
+                            0.5,
+                            1
+                        ]
+                    }
+                }
+            },
+            "name": "SVGMat_002"
+        },
+        "SVGMat_003-effect": {
+            "extensions": {
+                "KHR_materials_common": {
+                    "doubleSided": false,
+                    "jointCount": 0,
+                    "technique": "PHONG",
+                    "transparent": false,
+                    "values": {
+                        "ambient": [
+                            0,
+                            0,
+                            0,
+                            1
+                        ],
+                        "diffuse": [
+                            0.938686,
+                            0.201556,
+                            0.242281,
+                            1
+                        ],
+                        "emission": [
+                            0,
+                            0,
+                            0,
+                            1
+                        ],
+                        "shininess": 50,
+                        "specular": [
+                            0.5,
+                            0.5,
+                            0.5,
+                            1
+                        ]
+                    }
+                }
+            },
+            "name": "SVGMat_003"
+        },
+        "SVGMat_004-effect": {
+            "extensions": {
+                "KHR_materials_common": {
+                    "doubleSided": false,
+                    "jointCount": 0,
+                    "technique": "PHONG",
+                    "transparent": false,
+                    "values": {
+                        "ambient": [
+                            0,
+                            0,
+                            0,
+                            1
+                        ],
+                        "diffuse": [
+                            0.938686,
+                            0.201556,
+                            0.242281,
+                            1
+                        ],
+                        "emission": [
+                            0,
+                            0,
+                            0,
+                            1
+                        ],
+                        "shininess": 50,
+                        "specular": [
+                            0.5,
+                            0.5,
+                            0.5,
+                            1
+                        ]
+                    }
+                }
+            },
+            "name": "SVGMat_004"
+        },
+        "SVGMat_005-effect": {
+            "extensions": {
+                "KHR_materials_common": {
+                    "doubleSided": false,
+                    "jointCount": 0,
+                    "technique": "PHONG",
+                    "transparent": false,
+                    "values": {
+                        "ambient": [
+                            0,
+                            0,
+                            0,
+                            1
+                        ],
+                        "diffuse": [
+                            0.938686,
+                            0.201556,
+                            0.242281,
+                            1
+                        ],
+                        "emission": [
+                            0,
+                            0,
+                            0,
+                            1
+                        ],
+                        "shininess": 50,
+                        "specular": [
+                            0.5,
+                            0.5,
+                            0.5,
+                            1
+                        ]
+                    }
+                }
+            },
+            "name": "SVGMat_005"
+        },
+        "SVGMat_006-effect": {
+            "extensions": {
+                "KHR_materials_common": {
+                    "doubleSided": false,
+                    "jointCount": 0,
+                    "technique": "PHONG",
+                    "transparent": false,
+                    "values": {
+                        "ambient": [
+                            0,
+                            0,
+                            0,
+                            1
+                        ],
+                        "diffuse": [
+                            0.938686,
+                            0.201556,
+                            0.242281,
+                            1
+                        ],
+                        "emission": [
+                            0,
+                            0,
+                            0,
+                            1
+                        ],
+                        "shininess": 50,
+                        "specular": [
+                            0.5,
+                            0.5,
+                            0.5,
+                            1
+                        ]
+                    }
+                }
+            },
+            "name": "SVGMat_006"
+        },
+        "SVGMat_007-effect": {
+            "extensions": {
+                "KHR_materials_common": {
+                    "doubleSided": false,
+                    "jointCount": 0,
+                    "technique": "PHONG",
+                    "transparent": false,
+                    "values": {
+                        "ambient": [
+                            0,
+                            0,
+                            0,
+                            1
+                        ],
+                        "diffuse": [
+                            0.938686,
+                            0.201556,
+                            0.242281,
+                            1
+                        ],
+                        "emission": [
+                            0,
+                            0,
+                            0,
+                            1
+                        ],
+                        "shininess": 50,
+                        "specular": [
+                            0.5,
+                            0.5,
+                            0.5,
+                            1
+                        ]
+                    }
+                }
+            },
+            "name": "SVGMat_007"
+        },
+        "SVGMat_008-effect": {
+            "extensions": {
+                "KHR_materials_common": {
+                    "doubleSided": false,
+                    "jointCount": 0,
+                    "technique": "PHONG",
+                    "transparent": false,
+                    "values": {
+                        "ambient": [
+                            0,
+                            0,
+                            0,
+                            1
+                        ],
+                        "diffuse": [
+                            0.938686,
+                            0.201556,
+                            0.242281,
+                            1
+                        ],
+                        "emission": [
+                            0,
+                            0,
+                            0,
+                            1
+                        ],
+                        "shininess": 50,
+                        "specular": [
+                            0.5,
+                            0.5,
+                            0.5,
+                            1
+                        ]
+                    }
+                }
+            },
+            "name": "SVGMat_008"
+        },
+        "SVGMat_009-effect": {
+            "extensions": {
+                "KHR_materials_common": {
+                    "doubleSided": false,
+                    "jointCount": 0,
+                    "technique": "PHONG",
+                    "transparent": false,
+                    "values": {
+                        "ambient": [
+                            0,
+                            0,
+                            0,
+                            1
+                        ],
+                        "diffuse": [
+                            0.938686,
+                            0.201556,
+                            0.242281,
+                            1
+                        ],
+                        "emission": [
+                            0,
+                            0,
+                            0,
+                            1
+                        ],
+                        "shininess": 50,
+                        "specular": [
+                            0.5,
+                            0.5,
+                            0.5,
+                            1
+                        ]
+                    }
+                }
+            },
+            "name": "SVGMat_009"
+        },
+        "SVGMat_010-effect": {
+            "extensions": {
+                "KHR_materials_common": {
+                    "doubleSided": false,
+                    "jointCount": 0,
+                    "technique": "PHONG",
+                    "transparent": false,
+                    "values": {
+                        "ambient": [
+                            0,
+                            0,
+                            0,
+                            1
+                        ],
+                        "diffuse": [
+                            0.0998987,
+                            0.093059,
+                            0.337164,
+                            1
+                        ],
+                        "emission": [
+                            0,
+                            0,
+                            0,
+                            1
+                        ],
+                        "shininess": 50,
+                        "specular": [
+                            0.5,
+                            0.5,
+                            0.5,
+                            1
+                        ]
+                    }
+                }
+            },
+            "name": "SVGMat_010"
+        },
+        "SVGMat_011-effect": {
+            "extensions": {
+                "KHR_materials_common": {
+                    "doubleSided": false,
+                    "jointCount": 0,
+                    "technique": "PHONG",
+                    "transparent": false,
+                    "values": {
+                        "ambient": [
+                            0,
+                            0,
+                            0,
+                            1
+                        ],
+                        "diffuse": [
+                            1,
+                            1,
+                            1,
+                            1
+                        ],
+                        "emission": [
+                            0,
+                            0,
+                            0,
+                            1
+                        ],
+                        "shininess": 50,
+                        "specular": [
+                            0.5,
+                            0.5,
+                            0.5,
+                            1
+                        ]
+                    }
+                }
+            },
+            "name": "SVGMat_011"
+        },
+        "SVGMat_012-effect": {
+            "extensions": {
+                "KHR_materials_common": {
+                    "doubleSided": false,
+                    "jointCount": 0,
+                    "technique": "PHONG",
+                    "transparent": false,
+                    "values": {
+                        "ambient": [
+                            0,
+                            0,
+                            0,
+                            1
+                        ],
+                        "diffuse": [
+                            0.323143,
+                            0.0802198,
+                            0.376262,
+                            1
+                        ],
+                        "emission": [
+                            0,
+                            0,
+                            0,
+                            1
+                        ],
+                        "shininess": 50,
+                        "specular": [
+                            0.5,
+                            0.5,
+                            0.5,
+                            1
+                        ]
+                    }
+                }
+            },
+            "name": "SVGMat_012"
+        },
+        "SVGMat_013-effect": {
+            "extensions": {
+                "KHR_materials_common": {
+                    "doubleSided": false,
+                    "jointCount": 0,
+                    "technique": "PHONG",
+                    "transparent": false,
+                    "values": {
+                        "ambient": [
+                            0,
+                            0,
+                            0,
+                            1
+                        ],
+                        "diffuse": [
+                            0.323143,
+                            0.0802198,
+                            0.376262,
+                            1
+                        ],
+                        "emission": [
+                            0,
+                            0,
+                            0,
+                            1
+                        ],
+                        "shininess": 50,
+                        "specular": [
+                            0.5,
+                            0.5,
+                            0.5,
+                            1
+                        ]
+                    }
+                }
+            },
+            "name": "SVGMat_013"
+        }
+    },
+    "meshes": {
+        "Mesh-mesh": {
+            "name": "Mesh",
+            "primitives": [
+                {
+                    "attributes": {
+                        "NORMAL": "accessor_200",
+                        "POSITION": "accessor_198"
+                    },
+                    "indices": "accessor_160",
+                    "material": "SVGMat_013-effect",
+                    "mode": 4
+                },
+                {
+                    "attributes": {
+                        "NORMAL": "accessor_200",
+                        "POSITION": "accessor_198"
+                    },
+                    "indices": "accessor_163",
+                    "material": "SVGMat_012-effect",
+                    "mode": 4
+                },
+                {
+                    "attributes": {
+                        "NORMAL": "accessor_200",
+                        "POSITION": "accessor_198"
+                    },
+                    "indices": "accessor_166",
+                    "material": "SVGMat_011-effect",
+                    "mode": 4
+                },
+                {
+                    "attributes": {
+                        "NORMAL": "accessor_200",
+                        "POSITION": "accessor_198"
+                    },
+                    "indices": "accessor_169",
+                    "material": "SVGMat_010-effect",
+                    "mode": 4
+                },
+                {
+                    "attributes": {
+                        "NORMAL": "accessor_200",
+                        "POSITION": "accessor_198"
+                    },
+                    "indices": "accessor_172",
+                    "material": "SVGMat_009-effect",
+                    "mode": 4
+                },
+                {
+                    "attributes": {
+                        "NORMAL": "accessor_200",
+                        "POSITION": "accessor_198"
+                    },
+                    "indices": "accessor_175",
+                    "material": "SVGMat_008-effect",
+                    "mode": 4
+                },
+                {
+                    "attributes": {
+                        "NORMAL": "accessor_200",
+                        "POSITION": "accessor_198"
+                    },
+                    "indices": "accessor_178",
+                    "material": "SVGMat_007-effect",
+                    "mode": 4
+                },
+                {
+                    "attributes": {
+                        "NORMAL": "accessor_200",
+                        "POSITION": "accessor_198"
+                    },
+                    "indices": "accessor_181",
+                    "material": "SVGMat_006-effect",
+                    "mode": 4
+                },
+                {
+                    "attributes": {
+                        "NORMAL": "accessor_200",
+                        "POSITION": "accessor_198"
+                    },
+                    "indices": "accessor_184",
+                    "material": "SVGMat_005-effect",
+                    "mode": 4
+                },
+                {
+                    "attributes": {
+                        "NORMAL": "accessor_200",
+                        "POSITION": "accessor_198"
+                    },
+                    "indices": "accessor_187",
+                    "material": "SVGMat_004-effect",
+                    "mode": 4
+                },
+                {
+                    "attributes": {
+                        "NORMAL": "accessor_200",
+                        "POSITION": "accessor_198"
+                    },
+                    "indices": "accessor_190",
+                    "material": "SVGMat_003-effect",
+                    "mode": 4
+                },
+                {
+                    "attributes": {
+                        "NORMAL": "accessor_200",
+                        "POSITION": "accessor_198"
+                    },
+                    "indices": "accessor_193",
+                    "material": "SVGMat_002-effect",
+                    "mode": 4
+                },
+                {
+                    "attributes": {
+                        "NORMAL": "accessor_200",
+                        "POSITION": "accessor_198"
+                    },
+                    "indices": "accessor_196",
+                    "material": "SVGMat_001-effect",
+                    "mode": 4
+                }
+            ]
+        }
+    },
+    "nodes": {
+        "Camera": {
+            "camera": "Camera-camera",
+            "children": [],
+            "matrix": [
+                0.685921,
+                0.727676,
+                0,
+                0,
+                -0.324014,
+                0.305421,
+                0.895396,
+                0,
+                0.651558,
+                -0.61417,
+                0.445271,
+                0,
+                7.48113,
+                -6.50764,
+                5.34367,
+                1
+            ],
+            "name": "Camera"
+        },
+        "Curve_017": {
+            "children": [],
+            "matrix": [
+                26.9483,
+                0,
+                0,
+                0,
+                0,
+                26.9483,
+                0,
+                0,
+                0,
+                0,
+                26.9483,
+                0,
+                0,
+                0,
+                0,
+                1
+            ],
+            "meshes": [
+                "Mesh-mesh"
+            ],
+            "name": "Curve_017"
+        },
+        "node_2": {
+            "children": [
+                "Camera",
+                "Curve_017"
+            ],
+            "matrix": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                -1,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1
+            ],
+            "name": "Y_UP_Transform"
+        }
+    },
+    "scene": "defaultScene",
+    "scenes": {
+        "defaultScene": {
+            "nodes": [
+                "node_2"
+            ]
+        }
+    },
+    "skins": {}
+}

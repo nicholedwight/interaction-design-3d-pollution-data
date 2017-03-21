@@ -28,32 +28,57 @@
 		  text-decoration: none;
 		}
 	</style>
+	<link rel="stylesheet" href="./assets/css/main.css">
 </head>
 
 <body>
 
   <div id="ThreeJS"></div>
+	<div class="months-slider">
+  <div class="range">
+    <input type="range" id="slider" min="1" max="12" value="1" />
+  </div>
+
+  <ul class="range-labels">
+    <li class="month">Jan</li>
+    <li class="month">Feb</li>
+    <li class="month">Mar</li>
+    <li class="month">Apr</li>
+    <li class="month">May</li>
+    <li class="month">Jun</li>
+    <li class="month">Jul</li>
+    <li class="month">Aug</li>
+    <li class="month">Sep</li>
+    <li class="month">Oct</li>
+    <li class="month">Nov</li>
+    <li class="month">Dec</li>
+  </ul>
+</div>
 
   <!-- Include vendor scripts -->
   <script type="text/javascript" src="assets/js/three.min.js"></script>
-	<script type="text/javascript" src="assets/js/tween.min.js"></script>
+	<!-- <script type="text/javascript" src="assets/js/tween.min.js"></script> -->
 	<!-- <script type="text/javascript" src="assets/js/jquery-3.1.1.min.js"></script> -->
-  <script type="text/javascript" src="assets/js/controls/OrbitControls.js"></script>
-  <script type="text/javascript" src="assets/js/controls/DragControls.js"></script>
+	<script type="text/javascript" src="assets/js/_variables.js"></script>
+	<script type="text/javascript" src="assets/js/_slider.js"></script>
+	<script type="text/javascript" src="assets/js/_map.js"></script>
+  <!-- <script type="text/javascript" src="assets/js/controls/OrbitControls.js"></script>
+  <script type="text/javascript" src="assets/js/controls/DragControls.js"></script> -->
 	<!-- <script src="assets/js/KeyboardState.js"></script> -->
-	<script src="assets/js/d3-3.3.10.min.js"></script>
-	<script src="assets/js/d3.tip.min.js"></script>
+	<!-- <script src="assets/js/d3-3.3.10.min.js"></script> -->
+	<!-- <script src="assets/js/d3.tip.min.js"></script> -->
 	<script type="text/javascript" src="assets/js/controls/TrackballControls.js"></script>
-	<script type="text/javascript" src="assets/js/controls/OrbitControls.js"></script>
+	<script type="text/javascript" src="assets/js/loaders/GLTFLoader.js"></script>
+	<!-- <script type="text/javascript" src="assets/js/controls/OrbitControls.js"></script>
   <script type="text/javascript" src="assets/js/Detector.js"></script>
   <script type="text/javascript" src="assets/js/screenfull.min.js"></script>
-  <script type="text/javascript" src="assets/js/stats.min.js"></script>
+  <script type="text/javascript" src="assets/js/stats.min.js"></script> -->
 
   <!-- Include Three.JS scene controller script -->
 	<!-- <script src="assets/js/3d.js"></script>
 	<script src="assets/js/constants.js"></script>
 	<script src="assets/js/model.js"></script> -->
-	<script src="assets/js/gui.js"></script>
+	<!-- <script src="assets/js/gui.js"></script> -->
 	<!-- <script src="assets/js/d3.js"></script> -->
 	<!-- <script src="assets/js/3d.js"></script> -->
 	<!-- <script>
