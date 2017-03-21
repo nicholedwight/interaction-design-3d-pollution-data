@@ -15,6 +15,9 @@ var container, stats;
 
 
 			init();
+			initParticles();
+
+			setTimeout(animate, 0);
 
 			function init() {
 
@@ -52,17 +55,68 @@ var container, stats;
 				renderer.setSize( window.innerWidth, window.innerHeight );
 				container.appendChild( renderer.domElement );
 				createData();
-				createBristol();
+				// createBristol();
 				// createMoon();
+				clock = new THREE.Clock();
+
+        scene.fog = new THREE.Fog( renderer.getClearColor(), 20, 0 );
 
 				document.addEventListener( 'mousedown', onDocumentMouseDown, false );
 
 
 				window.addEventListener( 'resize', onWindowResize, false );
 
-				animate();
+				// animate();
 
 			}
+
+			function initParticles() {
+			  console.log('calling particles');
+			  particleGroup = new SPE.Group({
+			      texture: {
+			          value: THREE.ImageUtils.loadTexture('./assets/img/cloudSml.png')
+			      },
+			      blending: THREE.NormalBlending,
+			      fog: true
+			  });
+
+			  emitter = new SPE.Emitter({
+			      particleCount: 50,
+			      maxAge: { value: 0.5 },
+			      position: {
+			          value: new THREE.Vector3( 0, 0, 0 ),
+			          spread: new THREE.Vector3( 100, 500, 200 ),
+			      },
+			      acceleration: {
+			          value: new THREE.Vector3( 0, 0, 0 ),
+			      },
+			      rotation: {
+			          axis: new THREE.Vector3( 0, 1, 0 ),
+			          spread: new THREE.Vector3( 0, 20, 0 ),
+			          angle: 100 * Math.PI / 180,
+			      },
+			      velocity: {
+			          value: new THREE.Vector3( 0, 1, -0.5 ),
+			          spread: new THREE.Vector3( 0.25, 0.1, 0.25 )
+			      },
+			      opacity: {
+			          value: [ 0.2, 0.5, 0 ]
+			      },
+			      size: {
+			         value: 75,
+			         spread: 50
+			     },
+			      color: {
+			          value: [ new THREE.Color( 0xffffff ), new THREE.Color( 0xffffff ) ],
+			          spread: [ new THREE.Vector3( 0.2, 0.1, 0.1 ), new THREE.Vector3( 0, 0, 0 ) ]
+			      },
+			  });
+
+			  particleGroup.addEmitter( emitter );
+			  scene.add( particleGroup.mesh );
+			  console.log(particleGroup.mesh);
+			}
+
 
 			function createMoon() {
 
@@ -98,7 +152,7 @@ var container, stats;
 				document.addEventListener( 'mousemove', onDocumentMouseMove, false );
 				document.addEventListener( 'mouseup', onDocumentMouseUp, false );
 
-				console.log(intersects);
+				// console.log(intersects);
 				// mouseXOnMouseDown = event.clientX - windowHalfX;
 				// targetRotationOnMouseDown = targetRotation;
 
@@ -124,12 +178,13 @@ var container, stats;
 
 				requestAnimationFrame( animate );
 				controls.update();
-
+				render( clock.getDelta() );
 				render();
 
 			}
 
-			function render() {
+			function render( dt ) {
+				particleGroup.tick( dt );
 				raycaster.setFromCamera( mouse, camera );
 			  intersects = raycaster.intersectObjects(scene.children, true);
 				if (intersects.length > 0) {

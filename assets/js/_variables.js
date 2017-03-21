@@ -19,3 +19,6 @@ var offset = new THREE.Vector3();
 var windowHalfX = window.innerWidth / 2;
 var windowHalfY = window.innerHeight / 2;
 var wells, bristol;
+var slider;
+var particleGroupCrash;
+var emitter, particleGroup, clock;

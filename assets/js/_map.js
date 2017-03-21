@@ -835,8 +835,8 @@ function createBristol() {
   addShape( bristolSouthShape,  extrudeSettings, 0x483078, -1000, 0, -1200, 850, 0, 0, 2);
 }
 
+
 function createData() {
-  console.log('data butts');
   // BRISLINGTON =
   var brislintonMat = new THREE.MeshLambertMaterial({color: annoyingBarbie,opacity:0.6, emissive: annoyingBarbie});
   var geometry = new THREE.BoxGeometry(25,31.9028*3,25);
@@ -851,7 +851,41 @@ function createData() {
   var fishpondsMat = new THREE.MeshLambertMaterial({color: peach,opacity:0.6, emissive: peach});
   var geometry = new THREE.BoxGeometry(25,31.9028*3,25);
   var fishponds = new THREE.Mesh(geometry, fishpondsMat);
-  fishponds.scale.set(3,3,3);
+  // if (slider.value == 3) {
+  //   fishponds.scale.set(3,5,3);
+  // } else {
+  //   fishponds.scale.set(3,3,3);
+  // }
+
+
+
+  fetch('./data/monthlyAvg.json').then(function(response) {
+  	return response.json();
+  }).then(function(j) {
+    let data2 = j;
+    findMonth(chosenMonth, data2, findValues);
+
+  });
+
+  let chosenMonth = slider.value;
+
+  function findMonth(month, arr, fn) {
+      arr.map((el) => {
+          let elMonth = el[0].date.substr(0, 2);
+          if (elMonth.startsWith('0')) {
+              elMonth = elMonth.slice(1);
+          }
+          elMonth === month ? fn(el[0]) : null;
+      })
+  }
+
+  function findValues(month) {
+      console.log(`no levels: ${month.no}, no2 levels: ${month.no2}, nox levels: ${month.nox}`);
+  }
+
+
+  // console.log('eyo' + slider.value);
+  // fishponds.scale.set(3,5,3);
   fishponds.position.set(1090, 50, -350);
   fishponds.rotation.x = 0.2;
   scene.add(fishponds);
