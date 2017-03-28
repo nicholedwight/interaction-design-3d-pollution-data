@@ -174,3 +174,77 @@ div#loading-container {
 .months-slider .range-labels .active {
   color: #F1F1F1;
 }
+
+.radio-container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+/*.radio-container {
+  margin-top: 50px;
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  padding: .5em 1em;
+  padding-bottom: 1em;
+  font-family: 'helvetica neue', sans-serif;
+  color: #fff;
+  border-radius: 10px;
+  border: 1px solid #f1f1f1;
+}
+
+.input-label {
+  display: block;
+  cursor: pointer;
+  line-height: 2.5;
+}
+
+.hidden {
+  position: absolute;
+  margin: -1px;
+  height: 1px;
+  width: 1px;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.active-icon {
+  content: '';
+  display: inline-block;
+  height: 1em;
+  width: 1em;
+  margin-right: .8em;
+  vertical-align: -0.15em;
+  border: 0.125em solid #333;
+  box-shadow: 0 0 0 0.1em #aaa;
+  transition: 200ms ease-out;
+}
+
+[type="radio"] {
+  @extend .hidden;
+}
+
+[type="radio"] + span {
+  display: inline-block;
+  color: #aaa;
+}
+
+[type="radio"] + span:before {
+  @extend .active-icon;
+  border-radius: 50%;
+}
+
+[type="radio"]:checked + span {
+  color: #f1f1f1;
+}
+
+[type="radio"]:checked + span:before {
+  background-color: #f1f1f1;
+  box-shadow: 0 0 0 0.15em #f1f1f1;
+}
+
+[type="radio"]:focus + span:before {
+  transform: scale(1.2);
+}*/

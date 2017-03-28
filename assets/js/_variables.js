@@ -23,5 +23,8 @@ var slider;
 var particleGroupCrash;
 var emitter, particleGroup, clock;
 var group = new THREE.Group();
+var pollution;
 
+pollution = document.getElementById('no').value;
+var fieldset = document.querySelector('#radio-group');
 var monthsArray = [];

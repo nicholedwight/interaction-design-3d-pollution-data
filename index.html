@@ -35,25 +35,57 @@
 
   <div id="ThreeJS"></div>
 	<div class="months-slider">
-  <div class="range">
-    <input type="range" id="slider" min="1" max="12" value="1" />
-  </div>
+	  <div class="range">
+	    <input type="range" id="slider" min="1" max="12" value="1" />
+	  </div>
 
-  <ul class="range-labels">
-    <li class="month">Jan</li>
-    <li class="month">Feb</li>
-    <li class="month">Mar</li>
-    <li class="month">Apr</li>
-    <li class="month">May</li>
-    <li class="month">Jun</li>
-    <li class="month">Jul</li>
-    <li class="month">Aug</li>
-    <li class="month">Sep</li>
-    <li class="month">Oct</li>
-    <li class="month">Nov</li>
-    <li class="month">Dec</li>
-  </ul>
-</div>
+	  <ul class="range-labels">
+	    <li class="month">Jan</li>
+	    <li class="month">Feb</li>
+	    <li class="month">Mar</li>
+	    <li class="month">Apr</li>
+	    <li class="month">May</li>
+	    <li class="month">Jun</li>
+	    <li class="month">Jul</li>
+	    <li class="month">Aug</li>
+	    <li class="month">Sep</li>
+	    <li class="month">Oct</li>
+	    <li class="month">Nov</li>
+	    <li class="month">Dec</li>
+	  </ul>
+	</div>
+	<section class="radio-container">
+  <form action="">
+    <fieldset id="radio-group">
+      <legend>Type of Air Pollution</legend>
+      <label for="no"
+             class="input-label">
+        <input type="radio"
+               value="no"
+               name="options"
+               id="no"
+							 checked/>
+        <span>NO</span>
+      </label>
+      <label for="no2"
+             class="input-label">
+        <input type="radio"
+               value="no2"
+               name="options"
+               id="no2"/>
+        <span>NO2</span>
+      </label>
+      <label for="nox"
+             class="input-label">
+        <input type="radio"
+               value="nox"
+               name="options"
+               id="nox"/>
+        <span>NOX</span>
+      </label>
+    </fieldset>
+  </form>
+</section>
 
   <!-- Include vendor scripts -->
   <script type="text/javascript" src="assets/js/three.min.js"></script>
