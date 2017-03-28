@@ -60,7 +60,11 @@ div#loading-container {
 }*/
 
 .months-slider {
-  margin-top: 50px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin-bottom: 25px;
 }
 .months-slider .range {
   position: relative;

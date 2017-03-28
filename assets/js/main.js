@@ -22,12 +22,25 @@ var container, stats;
 
 			function init() {
 
-				container = document.createElement( 'div' );
-				document.body.appendChild( container );
+				container = document.getElementById( 'ThreeJS' );
+				// document.body.appendChild( container );
 				scene = new THREE.Scene();
 
-				camera = new THREE.PerspectiveCamera( 50, window.innerWidth / window.innerHeight, 1, 10000 );
-				camera.position.set( 100, 200, 4000 );
+				// camera = new THREE.PerspectiveCamera( 50, window.innerWidth / window.innerHeight, 1, 10000 );
+				var aspect = window.innerWidth / window.innerHeight;
+				var d = 4000;
+				camera = new THREE.OrthographicCamera(
+					window.innerWidth / - 0.9,
+					window.innerWidth / 0.9,
+					window.innerHeight / 0.9,
+					window.innerHeight / - 0.9,
+					- 1000, //near
+					6000  // far
+				);
+				camera.position.x = -800;
+				camera.position.y = 1700;
+				camera.position.z = 3000;
+				camera.lookAt( scene.position);
 
 				raycaster = new THREE.Raycaster();
 
@@ -42,8 +55,6 @@ var container, stats;
 				// controls.staticMoving = true;
 				// controls.dynamicDampingFactor = 0.3;
 				// controls.addEventListener( 'change', render );
-
-
 
 				scene.add( camera );
 

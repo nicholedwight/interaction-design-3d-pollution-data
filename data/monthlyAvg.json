@@ -4,6 +4,24 @@
         "location": "brislington",
         "lat": "51.4417",
         "long": "-2.56",
+        "date": "01/2016",
+        "no": 0,
+        "no2": 0,
+        "nox": 0
+    }],
+    [{
+        "location": "brislington",
+        "lat": "51.4417",
+        "long": "-2.56",
+        "date": "02/2016",
+        "no": 0,
+        "no2": 0,
+        "nox": 0
+    }],
+    [{
+        "location": "brislington",
+        "lat": "51.4417",
+        "long": "-2.56",
         "date": "03/2016",
         "no": 31.902885682575,
         "no2": 23.441176470588,
@@ -217,6 +235,96 @@
         "nox": 9.2274678111588
     }],
     [{
+        "location": "newfoundland_way",
+        "lat": "51.458",
+        "long": "-2.588",
+        "date": "03/2016",
+        "no": 0,
+        "no2": 0,
+        "nox": 0
+    }],
+    [{
+        "location": "newfoundland_way",
+        "lat": "51.458",
+        "long": "-2.588",
+        "date": "04/2016",
+        "no": 0,
+        "no2": 0,
+        "nox": 0
+    }],
+    [{
+        "location": "newfoundland_way",
+        "lat": "51.458",
+        "long": "-2.588",
+        "date": "05/2016",
+        "no": 0,
+        "no2": 0,
+        "nox": 0
+    }],
+    [{
+        "location": "newfoundland_way",
+        "lat": "51.458",
+        "long": "-2.588",
+        "date": "06/2016",
+        "no": 0,
+        "no2": 0,
+        "nox": 0
+    }],
+    [{
+        "location": "newfoundland_way",
+        "lat": "51.458",
+        "long": "-2.588",
+        "date": "07/2016",
+        "no": 0,
+        "no2": 0,
+        "nox": 0
+    }],
+    [{
+        "location": "newfoundland_way",
+        "lat": "51.458",
+        "long": "-2.588",
+        "date": "08/2016",
+        "no": 0,
+        "no2": 0,
+        "nox": 0
+    }],
+    [{
+        "location": "newfoundland_way",
+        "lat": "51.458",
+        "long": "-2.588",
+        "date": "09/2016",
+        "no": 0,
+        "no2": 0,
+        "nox": 0
+    }],
+    [{
+        "location": "newfoundland_way",
+        "lat": "51.458",
+        "long": "-2.588",
+        "date": "10/2016",
+        "no": 0,
+        "no2": 0,
+        "nox": 0
+    }],
+    [{
+        "location": "newfoundland_way",
+        "lat": "51.458",
+        "long": "-2.588",
+        "date": "11/2016",
+        "no": 0,
+        "no2": 0,
+        "nox": 0
+    }],
+    [{
+        "location": "newfoundland_way",
+        "lat": "51.458",
+        "long": "-2.588",
+        "date": "12/2016",
+        "no": 0,
+        "no2": 0,
+        "nox": 0
+    }],
+    [{
         "location": "parsons_st",
         "lat": "51.4327",
         "long": "-2.605",
@@ -341,6 +449,96 @@
         "no": 165.40633245383,
         "no2": 66.888805126272,
         "nox": 165.40633245383
+    }],
+    [{
+        "location": "rupert_st",
+        "lat": "51.455",
+        "long": "-2.597",
+        "date": "03/2016",
+        "no": 0,
+        "no2": 0,
+        "nox": 0
+    }],
+    [{
+        "location": "rupert_st",
+        "lat": "51.455",
+        "long": "-2.597",
+        "date": "04/2016",
+        "no": 0,
+        "no2": 0,
+        "nox": 0
+    }],
+    [{
+        "location": "rupert_st",
+        "lat": "51.455",
+        "long": "-2.597",
+        "date": "05/2016",
+        "no": 0,
+        "no2": 0,
+        "nox": 0
+    }],
+    [{
+        "location": "rupert_st",
+        "lat": "51.455",
+        "long": "-2.597",
+        "date": "06/2016",
+        "no": 0,
+        "no2": 0,
+        "nox": 0
+    }],
+    [{
+        "location": "rupert_st",
+        "lat": "51.455",
+        "long": "-2.597",
+        "date": "07/2016",
+        "no": 0,
+        "no2": 0,
+        "nox": 0
+    }],
+    [{
+        "location": "rupert_st",
+        "lat": "51.455",
+        "long": "-2.597",
+        "date": "08/2016",
+        "no": 0,
+        "no2": 0,
+        "nox": 0
+    }],
+    [{
+        "location": "rupert_st",
+        "lat": "51.455",
+        "long": "-2.597",
+        "date": "09/2016",
+        "no": 0,
+        "no2": 0,
+        "nox": 0
+    }],
+    [{
+        "location": "rupert_st",
+        "lat": "51.455",
+        "long": "-2.597",
+        "date": "10/2016",
+        "no": 0,
+        "no2": 0,
+        "nox": 0
+    }],
+    [{
+        "location": "rupert_st",
+        "lat": "51.455",
+        "long": "-2.597",
+        "date": "11/2016",
+        "no": 0,
+        "no2": 0,
+        "nox": 0
+    }],
+    [{
+        "location": "rupert_st",
+        "lat": "51.455",
+        "long": "-2.597",
+        "date": "12/2016",
+        "no": 0,
+        "no2": 0,
+        "nox": 0
     }],
     [{
         "location": "wells_rd",
