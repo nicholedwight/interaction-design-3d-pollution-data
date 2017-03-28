@@ -15,7 +15,8 @@ var container, stats;
 
 
 			init();
-			initParticles();
+			// initParticles();
+
 
 			setTimeout(animate, 0);
 
@@ -30,17 +31,17 @@ var container, stats;
 
 				raycaster = new THREE.Raycaster();
 
-				controls = new THREE.TrackballControls( camera );
-				controls.rotateSpeed = 1.0;
-				controls.zoomSpeed = 1.2;
-				controls.panSpeed = 0.8;
-				controls.minDistance = 100;
-				controls.maxDistance = 9000;
-				controls.noZoom = false;
-				controls.noPan = false;
-				controls.staticMoving = true;
-				controls.dynamicDampingFactor = 0.3;
-				controls.addEventListener( 'change', render );
+				// controls = new THREE.TrackballControls( camera );
+				// controls.rotateSpeed = 1.0;
+				// controls.zoomSpeed = 1.2;
+				// controls.panSpeed = 0.8;
+				// controls.minDistance = 100;
+				// controls.maxDistance = 9000;
+				// controls.noZoom = false;
+				// controls.noPan = false;
+				// controls.staticMoving = true;
+				// controls.dynamicDampingFactor = 0.3;
+				// controls.addEventListener( 'change', render );
 
 
 
@@ -54,9 +55,11 @@ var container, stats;
 				renderer.setPixelRatio( window.devicePixelRatio );
 				renderer.setSize( window.innerWidth, window.innerHeight );
 				container.appendChild( renderer.domElement );
+				createBristol();
 				createData();
-				// createBristol();
-				// createMoon();
+
+			  scene.add(group);
+
 				clock = new THREE.Clock();
 
         scene.fog = new THREE.Fog( renderer.getClearColor(), 20, 0 );
@@ -81,7 +84,7 @@ var container, stats;
 			  });
 
 			  emitter = new SPE.Emitter({
-			      particleCount: 50,
+			      particleCount: 550,
 			      maxAge: { value: 0.5 },
 			      position: {
 			          value: new THREE.Vector3( 0, 0, 0 ),
@@ -103,35 +106,21 @@ var container, stats;
 			          value: [ 0.2, 0.5, 0 ]
 			      },
 			      size: {
-			         value: 75,
-			         spread: 50
+			         value: 200,
+			         spread: 25
 			     },
-			      color: {
-			          value: [ new THREE.Color( 0xffffff ), new THREE.Color( 0xffffff ) ],
-			          spread: [ new THREE.Vector3( 0.2, 0.1, 0.1 ), new THREE.Vector3( 0, 0, 0 ) ]
-			      },
+					 color: {
+							 value: [ new THREE.Color( 0x333333 ), new THREE.Color( 0x111111 ) ],
+							 spread: [ new THREE.Vector3( 0.2, 0.1, 0.1 ), new THREE.Vector3( 0, 0, 0 ) ]
+					 },
+
 			  });
 
 			  particleGroup.addEmitter( emitter );
 			  scene.add( particleGroup.mesh );
-			  console.log(particleGroup.mesh);
+			  // console.log(particleGroup.mesh);
 			}
 
-
-			function createMoon() {
-
-			    // var geometry = new THREE.SphereGeometry(50, 50, 50, 0, Math.PI * 2, 0, Math.PI * 2);
-			    // var material = new THREE.MeshNormalMaterial();
-			    var geometry = new THREE.IcosahedronGeometry(50, 1);
-			    var material = new THREE.MeshPhongMaterial({
-			      color: 0xffffff,
-			      shading: THREE.FlatShading
-			    });
-			    moon = new THREE.Mesh( geometry, material );
-			    moon.name = 'moon';
-			    moon.position.x = 250;
-			    scene.add(moon);
-			}
 
 			function onWindowResize() {
 
@@ -153,16 +142,16 @@ var container, stats;
 				document.addEventListener( 'mouseup', onDocumentMouseUp, false );
 
 				// console.log(intersects);
-				// mouseXOnMouseDown = event.clientX - windowHalfX;
-				// targetRotationOnMouseDown = targetRotation;
+				mouseXOnMouseDown = event.clientX - windowHalfX;
+				targetRotationOnMouseDown = targetRotation;
 
 			}
 
 			function onDocumentMouseMove( event ) {
 
-				// mouseX = event.clientX - windowHalfX;
-				//
-				// targetRotation = targetRotationOnMouseDown + ( mouseX - mouseXOnMouseDown ) * 0.02;
+				mouseX = event.clientX - windowHalfX;
+
+				targetRotation = targetRotationOnMouseDown + ( mouseX - mouseXOnMouseDown ) * 0.02;
 
 			}
 
@@ -177,14 +166,15 @@ var container, stats;
 			function animate() {
 
 				requestAnimationFrame( animate );
-				controls.update();
+				// controls.update();
 				render( clock.getDelta() );
-				render();
+				// render();
 
 			}
 
 			function render( dt ) {
-				particleGroup.tick( dt );
+				group.rotation.y += ( targetRotation - group.rotation.y ) * 0.05;
+				// particleGroup.tick( dt );
 				raycaster.setFromCamera( mouse, camera );
 			  intersects = raycaster.intersectObjects(scene.children, true);
 				if (intersects.length > 0) {

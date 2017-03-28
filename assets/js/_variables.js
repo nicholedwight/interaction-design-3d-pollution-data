@@ -22,3 +22,6 @@ var wells, bristol;
 var slider;
 var particleGroupCrash;
 var emitter, particleGroup, clock;
+var group = new THREE.Group();
+
+var monthsArray = [];

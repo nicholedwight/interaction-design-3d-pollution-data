@@ -15,9 +15,8 @@ function createBristol() {
   //     scene.add(bristol);
   //     console.log(bristol);
   // });
-  group = new THREE.Group();
+
   group.position.y = 50;
-  scene.add( group );
 
 
   function addShape( shape, extrudeSettings, color, x, y, z, rx, ry, rz, s ) {
@@ -31,7 +30,8 @@ function createBristol() {
 
     var mesh = new THREE.Mesh( geometry, new THREE.MeshPhongMaterial( { color: color } ) );
     mesh.position.set( x, y, z - 75 );
-    mesh.rotation.set( rx, ry, rz );
+    // mesh.rotation.set( rx, ry, rz );
+    mesh.rotation.set(Math.PI / 2,0,0);
     mesh.scale.set( s, s, s );
     group.add( mesh );
 
@@ -838,33 +838,28 @@ function createBristol() {
 
 function createData() {
   // BRISLINGTON =
-  var brislintonMat = new THREE.MeshLambertMaterial({color: annoyingBarbie,opacity:0.6, emissive: annoyingBarbie});
+  var brislingtonMat = new THREE.MeshLambertMaterial({color: annoyingBarbie,opacity:0.6, emissive: annoyingBarbie});
   var geometry = new THREE.BoxGeometry(25,31.9028*3,25);
-  var brislinton = new THREE.Mesh(geometry, brislintonMat);
-  brislinton.scale.set(3,3,3);
-  brislinton.position.set(950, -80, 350);
-  brislinton.rotation.x = 0.2;
-  scene.add(brislinton);
+  var brislington = new THREE.Mesh(geometry, brislingtonMat);
+  brislington.scale.set(3,1,3);
+  brislington.position.set(950, 110, 350);
+  brislington.name = "brislington";
+  // brislington.rotation.x = 0.2;
+  group.add(brislington);
 
   // FISHPONDS
 
   var fishpondsMat = new THREE.MeshLambertMaterial({color: peach,opacity:0.6, emissive: peach});
   var geometry = new THREE.BoxGeometry(25,31.9028*3,25);
   var fishponds = new THREE.Mesh(geometry, fishpondsMat);
-  // if (slider.value == 3) {
-  //   fishponds.scale.set(3,5,3);
-  // } else {
-  //   fishponds.scale.set(3,3,3);
-  // }
-
-
 
   fetch('./data/monthlyAvg.json').then(function(response) {
   	return response.json();
   }).then(function(j) {
     let data2 = j;
     findMonth(chosenMonth, data2, findValues);
-
+    // console.log(month);
+    // return month;
   });
 
   let chosenMonth = slider.value;
@@ -879,26 +874,44 @@ function createData() {
       })
   }
 
+  // This is called within the promise
   function findValues(month) {
-      console.log(`no levels: ${month.no}, no2 levels: ${month.no2}, nox levels: ${month.nox}`);
+      // console.log(month.location);
+      // console.log(`no levels: ${month.no}, no2 levels: ${month.no2}, nox levels: ${month.nox}`);
+      if (!monthsArray.includes(month.location)) {
+        monthsArray.push(month.location);
+      }
+      // console.log(`location: ${month.location}, date: ${month.date}, no levels: ${month.no}, no2 levels: ${month.no2}, nox levels: ${month.nox}`);
+      // if (month.date == '02/2016') {
+        no = month.no/20;
+        if (month.location.length <= 6) {
+          console.log('no data butts');
+        } else {
+        console.log(month.location);
+          var bar = scene.getObjectByName(month.location);
+          bar.scale.set(3, no, 3);
+          // console.log(bar.position);
+          bar.position.set(bar.position.x, (month.no * 2) + 110 , bar.position.z);
+        }
+      return month;
   }
 
-
-  // console.log('eyo' + slider.value);
-  // fishponds.scale.set(3,5,3);
-  fishponds.position.set(1090, 50, -350);
-  fishponds.rotation.x = 0.2;
-  scene.add(fishponds);
+  console.log(monthsArray);
+  fishponds.scale.set(3,1,3);
+  fishponds.position.set(1090, 110, -250);
+  fishponds.name = 'fishponds';
+  group.add(fishponds);
 
   // NEWFOUNDLAND WAY
 
   var newfoundMat = new THREE.MeshLambertMaterial({color: salmon,opacity:0.6, emissive: salmon});
   var geometry = new THREE.BoxGeometry(25,31.9028*3,25);
   var newfound = new THREE.Mesh(geometry, newfoundMat);
-  newfound.scale.set(3,3,3);
-  newfound.position.set(-650, 90, -600);
-  newfound.rotation.x = 0.2;
-  scene.add(newfound);
+  newfound.scale.set(3,1,3);
+  newfound.position.set(-650, 110, -600);
+  newfound.name = "newfoundland_way"
+  // newfound.rotation.x = 0.2;
+  group.add(newfound);
 
 
   // PARSON ST
@@ -906,31 +919,33 @@ function createData() {
   var parsonMat = new THREE.MeshLambertMaterial({color: grape,opacity:0.6, emissive: grape});
   var geometry = new THREE.BoxGeometry(25,31.9028*3,25);
   var parson = new THREE.Mesh(geometry, parsonMat);
-  parson.scale.set(3,3,3);
-  parson.position.set(180, -90, 350);
-  parson.rotation.x = 0.2;
-  scene.add(parson);
+  parson.scale.set(3,1,3);
+  parson.position.set(180, 110, 350);
+  parson.name = "parsons_st";
+  // parson.rotation.x = 0.2;
+  group.add(parson);
 
   // RUPERT ST
 
   var rupertMat = new THREE.MeshLambertMaterial({color: dusk,opacity:0.6, emissive: dusk});
   var geometry = new THREE.BoxGeometry(25,31.9028*3,25);
   var rupert = new THREE.Mesh(geometry, rupertMat);
-  rupert.scale.set(3,3,3);
-  rupert.position.set(250, -40, 150);
-  rupert.rotation.x = 0.2;
-  scene.add(rupert);
+  rupert.scale.set(3,1,3);
+  rupert.position.set(250, 110, 150);
+  rupert.name = "rupert_st";
+  // rupert.rotation.x = 0.2;
+  group.add(rupert);
 
   // WELLS ST
 
   var wellsMat = new THREE.MeshLambertMaterial({color: midnight,opacity:0.6, emissive: midnight});
   var geometry = new THREE.BoxGeometry(25,31.9028*3,25);
   var wells = new THREE.Mesh(geometry, wellsMat);
-  wells.scale.set(3,3,3);
-  wells.position.set(700, -130, 600);
-  wells.rotation.x = 0.2;
-  wells.name = "wells street";
+  wells.scale.set(3,1,3);
+  wells.position.set(700, 110, 600);
+  // wells.rotation.x = 0.2;
+  wells.name = "wells_rd";
   // console.log(wells);
-  scene.add(wells);
+  group.add(wells);
 
 }
