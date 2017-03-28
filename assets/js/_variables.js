@@ -39,12 +39,12 @@ var monthsArray = [];
 // these would actually be hooked up to the zoopla api, these are the housing prices (will affect the size of the house)
 // brislington.scale, fishponds.scale, newfound.scale, parson.scale, rupert.scale, wells.scale
 var scalesArray = [
-  {x: 3, y: 1.3, z: 3}, // brislington
-  {x: 3, y: 1.3, z: 3}, // fishponds
-  {x: 3, y: 1.3, z: 3}, // newfoundland
+  {x: 3, y: 2.4, z: 3}, // brislington
+  {x: 3, y: 1.4, z: 3}, // fishponds
+  {x: 3, y: 3.4, z: 3}, // newfoundland
   {x: 3, y: 2.7, z: 3}, // parsons
-  {x: 3, y: 2.3, z: 3}, // rupert
-  {x: 3, y: 3.1, z: 3} // wells
+  {x: 3, y: 3.1, z: 3}, // rupert
+  {x: 3, y: 2, z: 3} // wells
 ];
 var positionsArray = [
   {x: 850, y: 110.2, z: 250}, // brislington
