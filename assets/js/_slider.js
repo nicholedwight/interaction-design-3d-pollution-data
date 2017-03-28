@@ -2,7 +2,7 @@
   // Create a true array from the node list
   const monthsArr = [].slice.call(document.querySelectorAll(".month"))
   // Target the <ul> for delegating events to the <li> tags
-  const monthsUl = document.querySelector("ul")
+  const monthsUl = document.querySelector(".range-labels")
 
   slider.addEventListener('change', activateLabel)
   monthsUl.addEventListener('click', changeSliderValue)

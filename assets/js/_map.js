@@ -33,6 +33,7 @@ function createBristol() {
     // mesh.rotation.set( rx, ry, rz );
     mesh.rotation.set(Math.PI / 2,0,0);
     mesh.scale.set( s, s, s );
+    mesh.name = "ground";
     mesh.receiveShadow = true;
     group.add( mesh );
 
@@ -41,6 +42,7 @@ function createBristol() {
     shape.autoClose = true;
     var points = shape.createPointsGeometry();
     var spacedPoints = shape.createSpacedPointsGeometry( 50 );
+
 
   }
 
@@ -839,67 +841,73 @@ function createBristol() {
 
 function createData() {
   // BRISLINGTON =
-  var brislingtonMat = new THREE.MeshLambertMaterial({color: annoyingBarbie,opacity:0.6, emissive: annoyingBarbie});
+  var brislingtonMat = new THREE.MeshLambertMaterial({color: brislingtonC,opacity:0.6});
   var geometry = new THREE.BoxGeometry(25,31.9028*3,25);
   var brislington = new THREE.Mesh(geometry, brislingtonMat);
   brislington.scale.set(3,0.1,3);
   brislington.position.set(950, 110, 350);
   brislington.name = "brislington";
+  interact.push(brislington);
   group.add(brislington);
 
   // FISHPONDS
 
-  var fishpondsMat = new THREE.MeshLambertMaterial({color: peach,opacity:0.6, emissive: peach});
+  var fishpondsMat = new THREE.MeshLambertMaterial({color: fishpondsC,opacity:0.6});
   var geometry = new THREE.BoxGeometry(25,31.9028*3,25);
   var fishponds = new THREE.Mesh(geometry, fishpondsMat);
   fishponds.scale.set(3,0.1,3);
   fishponds.position.set(1090, 110, -250);
   fishponds.name = 'fishponds';
+  interact.push(fishponds);
   group.add(fishponds);
 
   // NEWFOUNDLAND WAY
 
-  var newfoundMat = new THREE.MeshLambertMaterial({color: salmon,opacity:0.6, emissive: salmon});
+  var newfoundMat = new THREE.MeshLambertMaterial({color: newfoundC,opacity:0.6});
   var geometry = new THREE.BoxGeometry(25,31.9028*3,25);
   var newfound = new THREE.Mesh(geometry, newfoundMat);
   newfound.scale.set(3,0.1,3);
   newfound.position.set(-650, 110, -600);
   newfound.name = "newfoundland_way";
   // newfound.rotation.x = 0.2;
+  interact.push(newfound);
   group.add(newfound);
 
 
   // PARSON ST
 
-  var parsonMat = new THREE.MeshLambertMaterial({color: grape,opacity:0.6, emissive: grape});
+  var parsonMat = new THREE.MeshLambertMaterial({color: parsonC,opacity:0.6});
   var geometry = new THREE.BoxGeometry(25,31.9028*3,25);
   var parson = new THREE.Mesh(geometry, parsonMat);
   parson.scale.set(3,0.1,3);
   parson.position.set(180, 110, 350);
   parson.name = "parsons_st";
   // parson.rotation.x = 0.2;
+  interact.push(parson);
   group.add(parson);
 
   // RUPERT ST
 
-  var rupertMat = new THREE.MeshLambertMaterial({color: dusk,opacity:0.6, emissive: dusk});
+  var rupertMat = new THREE.MeshLambertMaterial({color: rupertC,opacity:0.6});
   var geometry = new THREE.BoxGeometry(25,31.9028*3,25);
   var rupert = new THREE.Mesh(geometry, rupertMat);
   rupert.scale.set(3,0.1,3);
   rupert.position.set(250, 110, 150);
   rupert.name = "rupert_st";
   // rupert.rotation.x = 0.2;
+  interact.push(rupert);
   group.add(rupert);
 
   // WELLS ST
 
-  var wellsMat = new THREE.MeshLambertMaterial({color: midnight,opacity:0.6, emissive: midnight});
+  var wellsMat = new THREE.MeshLambertMaterial({color: wellsC,opacity:0.6});
   var geometry = new THREE.BoxGeometry(25,31.9028*3,25);
   var wells = new THREE.Mesh(geometry, wellsMat);
   wells.scale.set(3,0.1,3);
   wells.position.set(700, 110, 600);
   wells.name = "wells_rd";
   // console.log(wells);
+  interact.push(wells);
   group.add(wells);
 
   fetch('./data/monthlyAvg.json').then(function(response) {
@@ -930,23 +938,24 @@ function createData() {
       }
       // console.log(pollution);
       // console.log(`location: ${month.location}, date: ${month.date}, no levels: ${month.no}, no2 levels: ${month.no2}, nox levels: ${month.nox}`);
-      console.log(month);
+      // console.log(month);
       no = month.no/20;
       no2 = month.no2/20;
       nox = month.nox/20;
-      console.log(no, no2, nox);
       var bar = scene.getObjectByName(month.location);
-      console.log('butts ' + pollution);
       if (pollution == "no") {
         bar.scale.set(3, no, 3);
         bar.position.set(bar.position.x, (month.no * 2) + 110 , bar.position.z);
+        document.querySelector("#li-" + month.location + ">span").innerHTML = "Nitric Oxide Levels: " + Math.round(month.no * 100) / 100;
       } else if (pollution == "no2") {
         bar.scale.set(3, no2, 3);
         bar.position.set(bar.position.x, (month.no2 * 2) + 110 , bar.position.z);
+        document.querySelector("#li-" + month.location + ">span").innerHTML = "Nitrogen Dioxide Levels: " + Math.round(month.no2 * 100) / 100;
       } else if (pollution == "nox") {
         bar.scale.set(3, nox, 3);
-        bar.position.set(bar.position.x, (month.nox * 2) + 110 , bar.position.z);
+        bar.position.set(bar.position.x, (month.nox * 2) + 110 , bar.position.z);document.querySelector("#li-" + month.location + ">span").innerHTML = "NOX Levels: " + Math.round(month.no2 * 100) / 100;
       }
+      scalesArray[bar.name] = bar.scale;
       return month;
   }
 
@@ -958,4 +967,33 @@ function createData() {
   }
 
   fieldset.addEventListener('click', findRadio);
+}
+
+
+
+function createHouse() {
+  var loader = new THREE.GLTFLoader();
+  var url = "house2.gltf";
+  var count = 0;
+  for (var i = 0; i < positionsArray.length; i++) {
+    loader.load(url, function (data) {
+      gltf = data;
+      var object = gltf.scene;
+      house = object;
+      house.position.z = positionsArray[count].z;
+      house.position.x = positionsArray[count].x;
+      house.position.y = 80;
+
+      house.scale.z = scalesArray[count].y * 5;
+      house.scale.x = scalesArray[count].y * 5;
+      house.scale.y = scalesArray[count].y * 5;
+      // house.dir = 2;
+      // house.scale.set(20,20,20);
+      // house.rotation.z = 0.5;
+      house.name = "house";
+      group.add(house);
+      interact.push(house);
+      count ++;
+    });
+  }
 }

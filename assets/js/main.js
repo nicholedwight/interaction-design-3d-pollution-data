@@ -85,6 +85,7 @@ var container, stats;
 				container.appendChild( renderer.domElement );
 				createBristol();
 				createData();
+				createHouse();
 
 			  scene.add(group);
 

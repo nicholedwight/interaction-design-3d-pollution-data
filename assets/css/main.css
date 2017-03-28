@@ -181,6 +181,53 @@ div#loading-container {
   right: 0;
 }
 
+.container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 0.5em;
+  padding-left: 1em;
+  color: #f1f1f1;
+  font-family: 'helvetica neue', sans-serif;
+}
+.container ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  border: 1px soild #ccc;
+}
+.container #li-brislington {
+  border-left: 15px solid #e77784;
+}
+.container #li-fishponds {
+  border-left: 15px solid #8285dc;
+}
+.container #li-parsons_st {
+  border-left: 15px solid #9ccb47;
+}
+.container #li-newfoundland_way {
+  border-left: 15px solid #ae74c5;
+}
+.container #li-rupert_st {
+  border-left: 15px solid #edb850;
+}
+.container #li-wells_rd {
+  border-left: 15px solid #5bbeca;
+}
+.container li {
+  padding: 1em;
+}
+.container h3 {
+  margin: 0;
+}
+.container p {
+  margin: 0.5em 0;
+  color: #ccc;
+}
+.container span {
+  color: #ccc;
+}
+
 /*.radio-container {
   margin-top: 50px;
   position: relative;
