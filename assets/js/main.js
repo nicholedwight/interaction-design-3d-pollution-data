@@ -60,29 +60,49 @@ var container, stats;
 
 				// var light = new THREE.PointLight( 0xffffff, 0.8 );
 				// camera.add( light );
-				ambientLight = new THREE.AmbientLight(0x663344,0.3);
-			  scene.add(ambientLight);
 
-			  light = new THREE.DirectionalLight(0xffffff, 1.5);
-			  light.position.set(-400,150,100);
-			  light.castShadow = true;
-			  light.shadow.camera.left = -400;
-			  light.shadow.camera.right = 400;
-			  light.shadow.camera.top = 400;
-			  light.shadow.camera.bottom = -400;
-			  light.shadow.camera.near = 1;
-			  light.shadow.camera.far = 1000;
-			  light.shadow.mapSize.width = 2048;
-			  light.shadow.mapSize.height = 2048;
 
-			  scene.add(light);
+				// ambientLight = new THREE.AmbientLight(0x663344,0.3);
+			  // scene.add(ambientLight);
+				//
+			  // light = new THREE.DirectionalLight(0xffffff, 1.5);
+			  // light.position.set(-400,150,100);
+			  // light.castShadow = true;
+			  // light.shadow.camera.left = -400;
+			  // light.shadow.camera.right = 400;
+			  // light.shadow.camera.top = 400;
+			  // light.shadow.camera.bottom = -400;
+			  // light.shadow.camera.near = 1;
+			  // light.shadow.camera.far = 1000;
+			  // light.shadow.mapSize.width = 2048;
+			  // light.shadow.mapSize.height = 2048;
+				//
+			  // scene.add(light);
+				light = new THREE.HemisphereLight(0xffffff, 0xffffff, .5)
+
+  shadowLight = new THREE.DirectionalLight(0xffffff, .8);
+  shadowLight.position.set(200, 200, 200);
+  shadowLight.castShadow = true;
+  shadowLight.shadowDarkness = .2;
+
+  backLight = new THREE.DirectionalLight(0xffffff, .4);
+  backLight.position.set(-100, 200, 50);
+  backLight.shadowDarkness = .1;
+  backLight.castShadow = true;
+
+  scene.add(backLight);
+  scene.add(light);
+  scene.add(shadowLight);
 
 				renderer = new THREE.WebGLRenderer( { antialias: true } );
-				renderer.setClearColor( 0x3a3a3c );
+				renderer.setClearColor( 0x14232d );
 				renderer.shadowMap.enabled = true;
 				renderer.setPixelRatio( window.devicePixelRatio );
 				renderer.setSize( window.innerWidth, window.innerHeight );
 				container.appendChild( renderer.domElement );
+				renderer.gammaInput = true;
+				renderer.gammaOutput = true;
+				effect = new THREE.OutlineEffect( renderer );
 				createBristol();
 				createData();
 				createHouse();
@@ -224,6 +244,6 @@ var container, stats;
 				}
 
 				// group.rotation.y += ( targetRotation - group.rotation.y ) * 0.05;
-				renderer.render( scene, camera );
+				effect.render( scene, camera );
 
 			}

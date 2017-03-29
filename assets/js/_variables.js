@@ -1,23 +1,15 @@
 // COLOURS INNIT
 
-var sunset = 0xfcc396;
-var peach = 0xfca095;
-var salmon = 0xf87c87;
-var annoyingBarbie = 0xf25292;
-var grape = 0x9a50a5;
-var dusk = 0x59569d;
-var midnight = 0x38477e;
-
 var brislingtonC = 0xe77784;
 var fishpondsC = 0x8285dc;
 var newfoundC = 0xae74c5;
-var parsonC = 0x9ccb47;
+var parsonC = 0x5bbeca;
 var rupertC = 0xedb850;
-var wellsC = 0x5bbeca;
+var wellsC = 0x9ccb47;
 
 var container = document.getElementById('container');
 var canvas = document.getElementsByTagName('canvas');
-var scene, renderer, camera, controls, control, raycaster;
+var scene, renderer, camera, controls, control, raycaster, effect;
 var mouse = new THREE.Vector2(), INTERSECTED;
 var mouseIsDown = false;
 var selection = null;
@@ -54,3 +46,13 @@ var positionsArray = [
   {x: 380, y: 440.81266490766, z: 100}, // rupert
   {x: 850, y: 261.30006930007, z: 600} // well
 ];
+
+
+var shininess = 50, specular = 0x333333, bumpScale = 1, shading = THREE.SmoothShading;
+var alpha = 0.5;
+var gamma = 0.5;
+var beta = 0.8;
+
+var specularShininess = Math.pow( 2, alpha * 10 );
+var specularColor = new THREE.Color( beta * 0.2, beta * 0.2, beta * 0.2 );
+var diffuseColor = new THREE.Color(0.1,0.1,0.1);

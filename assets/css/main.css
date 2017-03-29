@@ -205,10 +205,10 @@ div#loading-container {
   font-size: 13px;
 }
 .container #li-parsons_st {
-  border-left: 15px solid #9ccb47;
+  border-left: 15px solid #5bbeca;
 }
 .container #li-parsons_st p, .container #li-parsons_st span {
-  color: #9ccb47;
+  color: #5bbeca;
   font-size: 13px;
 }
 .container #li-newfoundland_way {
@@ -226,10 +226,10 @@ div#loading-container {
   font-size: 13px;
 }
 .container #li-wells_rd {
-  border-left: 15px solid #5bbeca;
+  border-left: 15px solid #9ccb47;
 }
 .container #li-wells_rd p, .container #li-wells_rd span {
-  color: #5bbeca;
+  color: #9ccb47;
   font-size: 13px;
 }
 .container li {

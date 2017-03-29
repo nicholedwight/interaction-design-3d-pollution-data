@@ -17,7 +17,23 @@ function createBristol() {
   // });
 
   group.position.y = 50;
+  var shininess = 50, specular = 0x333333, bumpScale = 1, shading = THREE.SmoothShading;
+  var alpha = 0.5;
+  var gamma = 0.5;
+  var beta = 0.8;
 
+  var specularShininess = Math.pow( 2, alpha * 10 );
+  var specularColor = new THREE.Color( beta * 0.2, beta * 0.2, beta * 0.2 );
+  var diffuseColor = new THREE.Color(0.1,0.1,0.1);
+
+  var material = new THREE.MeshToonMaterial( {
+		bumpScale: 1,
+		color: 0x2e3761,
+		specular: specularColor,
+		reflectivity: beta,
+		shininess: 64,
+		shading: THREE.SmoothShading,
+	});
 
   function addShape( shape, extrudeSettings, color, x, y, z, rx, ry, rz, s ) {
 
@@ -29,6 +45,7 @@ function createBristol() {
     var geometry = new THREE.ExtrudeGeometry( shape, extrudeSettings );
 
     var mesh = new THREE.Mesh( geometry, new THREE.MeshPhongMaterial( { color: color } ) );
+    // var mesh = new THREE.Mesh( geometry, new THREE.MeshPhongMaterial(material) );
     mesh.position.set( x, y, z - 75 );
     // mesh.rotation.set( rx, ry, rz );
     mesh.rotation.set(Math.PI / 2,0,0);
@@ -43,6 +60,12 @@ function createBristol() {
     var points = shape.createPointsGeometry();
     var spacedPoints = shape.createSpacedPointsGeometry( 50 );
 
+    // solid line
+		var line = new THREE.Line( points, new THREE.LineBasicMaterial( { color: 0x000000, linewidth: 3 } ) );
+		line.position.set( x, y + 60, z - 75 );
+		line.rotation.set(Math.PI / 2,0,0);
+		line.scale.set( s, s, s );
+		// group.add( line );
 
   }
 
@@ -361,6 +384,7 @@ function createBristol() {
   bristolNorthWest.push(new THREE.Vector2(481.516, 202.373));
   bristolNorthWest.push(new THREE.Vector2(488.21, 205.263));
   bristolNorthWest.push(new THREE.Vector2(491.421, 197.704));
+
 
   for( var i = 0; i < bristolNorthWest.length; i ++ ) bristolNorthWest[ i ].multiplyScalar( 2 );
 
@@ -832,16 +856,16 @@ function createBristol() {
 
   var extrudeSettings = { amount: 8, bevelEnabled: true, bevelSegments: 2, steps: 2, bevelSize: 1, bevelThickness: 25 };
 
-  addShape( bristolNorthWestShape,  extrudeSettings, 0x001848, -1000, 0, -1200, 850, 0, 0, 2);
-  addShape( bristolWestShape,  extrudeSettings, 0x604878, -1000, 0, -1200, 850, 0, 0, 2);
-  addShape( bristolEastShape,  extrudeSettings, 0x906090, -1000, 0, -1200, 850, 0, 0, 2);
-  addShape( bristolSouthShape,  extrudeSettings, 0x483078, -1000, 0, -1200, 850, 0, 0, 2);
+  addShape( bristolNorthWestShape,  { amount: 8, bevelEnabled: true, bevelSegments: 2, steps: 2, bevelSize: 1, bevelThickness: 25 }, 0x160e23, -1000, 0, -1200, 850, 0, 0, 2);
+  addShape( bristolWestShape,  { amount: 8, bevelEnabled: true, bevelSegments: 2, steps: 2, bevelSize: 1, bevelThickness: 45 }, 0x160e23, -1000, 0, -1200, 850, 0, 0, 2);
+  addShape( bristolEastShape,  { amount: 8, bevelEnabled: true, bevelSegments: 2, steps: 2, bevelSize: 1, bevelThickness: 35 }, 0x160e23, -1000, 0, -1200, 850, 0, 0, 2);
+  addShape( bristolSouthShape,  { amount: 8, bevelEnabled: true, bevelSegments: 2, steps: 2, bevelSize: 1, bevelThickness: 25 }, 0x160e23, -1000, 0, -1200, 850, 0, 0, 2);
 }
 
 
 function createData() {
   // BRISLINGTON =
-  var brislingtonMat = new THREE.MeshLambertMaterial({color: brislingtonC,opacity:0.6});
+  var brislingtonMat = new THREE.MeshBasicMaterial({color: brislingtonC, transparent: true, opacity:0.7, emissive:brislingtonC});
   var geometry = new THREE.BoxGeometry(25,31.9028*3,25);
   var brislington = new THREE.Mesh(geometry, brislingtonMat);
   brislington.scale.set(3,0.1,3);
@@ -852,7 +876,7 @@ function createData() {
 
   // FISHPONDS
 
-  var fishpondsMat = new THREE.MeshLambertMaterial({color: fishpondsC,opacity:0.6});
+  var fishpondsMat = new THREE.MeshBasicMaterial({color: fishpondsC, transparent: true, opacity:0.7, emissive:fishpondsC});
   var geometry = new THREE.BoxGeometry(25,31.9028*3,25);
   var fishponds = new THREE.Mesh(geometry, fishpondsMat);
   fishponds.scale.set(3,0.1,3);
@@ -863,7 +887,7 @@ function createData() {
 
   // NEWFOUNDLAND WAY
 
-  var newfoundMat = new THREE.MeshLambertMaterial({color: newfoundC,opacity:0.6});
+  var newfoundMat = new THREE.MeshBasicMaterial({color: newfoundC, transparent: true, opacity:0.7, emissive:newfoundC});
   var geometry = new THREE.BoxGeometry(25,31.9028*3,25);
   var newfound = new THREE.Mesh(geometry, newfoundMat);
   newfound.scale.set(3,0.1,3);
@@ -876,7 +900,7 @@ function createData() {
 
   // PARSON ST
 
-  var parsonMat = new THREE.MeshLambertMaterial({color: parsonC,opacity:0.6});
+  var parsonMat = new THREE.MeshBasicMaterial({color: parsonC, transparent: true, opacity:0.7, emissive:parsonC});
   var geometry = new THREE.BoxGeometry(25,31.9028*3,25);
   var parson = new THREE.Mesh(geometry, parsonMat);
   parson.scale.set(3,0.1,3);
@@ -888,7 +912,7 @@ function createData() {
 
   // RUPERT ST
 
-  var rupertMat = new THREE.MeshLambertMaterial({color: rupertC,opacity:0.6});
+  var rupertMat = new THREE.MeshBasicMaterial({color: rupertC, transparent: true, opacity:0.7, emissive:rupertC});
   var geometry = new THREE.BoxGeometry(25,31.9028*3,25);
   var rupert = new THREE.Mesh(geometry, rupertMat);
   rupert.scale.set(3,0.1,3);
@@ -900,7 +924,7 @@ function createData() {
 
   // WELLS ST
 
-  var wellsMat = new THREE.MeshLambertMaterial({color: wellsC,opacity:0.6});
+  var wellsMat = new THREE.MeshBasicMaterial({color: wellsC, transparent: true, opacity:0.7, emissive:wellsC});
   var geometry = new THREE.BoxGeometry(25,31.9028*3,25);
   var wells = new THREE.Mesh(geometry, wellsMat);
   wells.scale.set(3,0.1,3);
@@ -970,7 +994,7 @@ function createData() {
 
 function createHouse() {
   var loader = new THREE.GLTFLoader();
-  var url = "house2.gltf";
+  var url = "blkhouse.gltf";
   var count = 0;
   for (var i = 0; i < positionsArray.length; i++) {
     loader.load(url, function (data) {
