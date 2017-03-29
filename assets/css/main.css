@@ -175,12 +175,6 @@ div#loading-container {
   color: #F1F1F1;
 }
 
-.radio-container {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
-
 .container {
   position: absolute;
   left: 0;
@@ -199,20 +193,44 @@ div#loading-container {
 .container #li-brislington {
   border-left: 15px solid #e77784;
 }
+.container #li-brislington p, .container #li-brislington span {
+  color: #e77784;
+  font-size: 13px;
+}
 .container #li-fishponds {
   border-left: 15px solid #8285dc;
+}
+.container #li-fishponds p, .container #li-fishponds span {
+  color: #8285dc;
+  font-size: 13px;
 }
 .container #li-parsons_st {
   border-left: 15px solid #9ccb47;
 }
+.container #li-parsons_st p, .container #li-parsons_st span {
+  color: #9ccb47;
+  font-size: 13px;
+}
 .container #li-newfoundland_way {
   border-left: 15px solid #ae74c5;
+}
+.container #li-newfoundland_way p, .container #li-newfoundland_way span {
+  color: #ae74c5;
+  font-size: 13px;
 }
 .container #li-rupert_st {
   border-left: 15px solid #edb850;
 }
+.container #li-rupert_st p, .container #li-rupert_st span {
+  color: #edb850;
+  font-size: 13px;
+}
 .container #li-wells_rd {
   border-left: 15px solid #5bbeca;
+}
+.container #li-wells_rd p, .container #li-wells_rd span {
+  color: #5bbeca;
+  font-size: 13px;
 }
 .container li {
   padding: 1em;
@@ -228,17 +246,18 @@ div#loading-container {
   color: #ccc;
 }
 
-/*.radio-container {
-  margin-top: 50px;
-  position: relative;
-  width: 100%;
-  max-width: 350px;
+.radio-container {
+  position: absolute;
+  bottom: 100px;
+  right: 0;
   padding: .5em 1em;
   padding-bottom: 1em;
   font-family: 'helvetica neue', sans-serif;
   color: #fff;
-  border-radius: 10px;
-  border: 1px solid #f1f1f1;
+}
+
+fieldset {
+  border: none;
 }
 
 .input-label {
@@ -247,7 +266,7 @@ div#loading-container {
   line-height: 2.5;
 }
 
-.hidden {
+.hidden, [type="radio"] {
   position: absolute;
   margin: -1px;
   height: 1px;
@@ -257,7 +276,7 @@ div#loading-container {
   overflow: hidden;
 }
 
-.active-icon {
+.active-icon, [type="radio"] + span:before {
   content: '';
   display: inline-block;
   height: 1em;
@@ -269,17 +288,12 @@ div#loading-container {
   transition: 200ms ease-out;
 }
 
-[type="radio"] {
-  @extend .hidden;
-}
-
 [type="radio"] + span {
   display: inline-block;
   color: #aaa;
 }
 
 [type="radio"] + span:before {
-  @extend .active-icon;
   border-radius: 50%;
 }
 
@@ -294,4 +308,4 @@ div#loading-container {
 
 [type="radio"]:focus + span:before {
   transform: scale(1.2);
-}*/
+}
