@@ -4,8 +4,9 @@
   // Target the <ul> for delegating events to the <li> tags
   const monthsUl = document.querySelector(".range-labels")
 
-  slider.addEventListener('change', activateLabel)
-  monthsUl.addEventListener('click', changeSliderValue)
+  slider.addEventListener('change', activateLabel);
+  slider.addEventListener('change', changeSliderValue);
+  monthsUl.addEventListener('click', changeSliderValue);
 
   // Check to see if any labels are already active and if so, deactivate them
   function deactivatePrevious() {
@@ -21,6 +22,7 @@
     monthsArr.map((el) => {
       if (parseInt(monthsArr.indexOf(el) + 1) === parseInt(slider.value)) {
         el.classList.add('active');
+        createData();
       }
     })
   }

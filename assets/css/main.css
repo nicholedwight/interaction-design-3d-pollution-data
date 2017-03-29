@@ -58,7 +58,9 @@ div#loading-container {
     text-align: center;
     display: none;
 }*/
-
+#test {
+  margin-bottom: 2em;
+}
 .months-slider {
   position: absolute;
   bottom: 0;

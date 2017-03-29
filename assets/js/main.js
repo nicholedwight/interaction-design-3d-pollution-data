@@ -80,19 +80,19 @@ var container, stats;
 			  // scene.add(light);
 				light = new THREE.HemisphereLight(0xffffff, 0xffffff, .5)
 
-  shadowLight = new THREE.DirectionalLight(0xffffff, .8);
-  shadowLight.position.set(200, 200, 200);
-  shadowLight.castShadow = true;
-  shadowLight.shadowDarkness = .2;
+			  shadowLight = new THREE.DirectionalLight(0xffffff, .8);
+			  shadowLight.position.set(200, 200, 200);
+			  shadowLight.castShadow = true;
+			  shadowLight.shadowDarkness = .2;
 
-  backLight = new THREE.DirectionalLight(0xffffff, .4);
-  backLight.position.set(-100, 200, 50);
-  backLight.shadowDarkness = .1;
-  backLight.castShadow = true;
+			  backLight = new THREE.DirectionalLight(0xffffff, .4);
+			  backLight.position.set(-100, 200, 50);
+			  backLight.shadowDarkness = .1;
+			  backLight.castShadow = true;
 
-  scene.add(backLight);
-  scene.add(light);
-  scene.add(shadowLight);
+			  scene.add(backLight);
+			  scene.add(light);
+			  scene.add(shadowLight);
 
 				renderer = new THREE.WebGLRenderer( { antialias: true } );
 				renderer.setClearColor( 0x14232d );
@@ -114,7 +114,7 @@ var container, stats;
         // scene.fog = new THREE.Fog(0xffffff, 0.015);
 
 			  fieldset.addEventListener('click', createData);
-				document.addEventListener( 'mousedown', onDocumentMouseDown, false );
+				test.addEventListener( 'mousedown', onDocumentMouseDown, false );
 
 
 				window.addEventListener( 'resize', onWindowResize, false );
@@ -188,8 +188,11 @@ var container, stats;
 
 				event.preventDefault();
 
-				document.addEventListener( 'mousemove', onDocumentMouseMove, false );
-				document.addEventListener( 'mouseup', onDocumentMouseUp, false );
+				// document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+				// document.addEventListener( 'mouseup', onDocumentMouseUp, false );
+				test.addEventListener( 'mousemove', onDocumentMouseMove, false );
+		    test.addEventListener( 'mouseup', onDocumentMouseUp, false );
+		    test.addEventListener( 'mouseout', onDocumentMouseOut, false );
 
 				// console.log(intersects);
 				mouseXOnMouseDown = event.clientX - windowHalfX;
@@ -207,10 +210,20 @@ var container, stats;
 
 			function onDocumentMouseUp( event ) {
 
-				document.removeEventListener( 'mousemove', onDocumentMouseMove, false );
-				document.removeEventListener( 'mouseup', onDocumentMouseUp, false );
+				// document.removeEventListener( 'mousemove', onDocumentMouseMove, false );
+				// document.removeEventListener( 'mouseup', onDocumentMouseUp, false );
+				test.removeEventListener( 'mousemove', onDocumentMouseMove, false );
+		    test.removeEventListener( 'mouseup', onDocumentMouseUp, false );
+		    test.removeEventListener( 'mouseout', onDocumentMouseOut, false );
 
 			}
+
+			function onDocumentMouseOut( event ) {
+		    test.removeEventListener( 'mousemove', onDocumentMouseMove, false );
+		    test.removeEventListener( 'mouseup', onDocumentMouseUp, false );
+		    test.removeEventListener( 'mouseout', onDocumentMouseOut, false );
+
+		  }
 
 
 			function animate() {

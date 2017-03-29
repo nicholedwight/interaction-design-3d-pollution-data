@@ -56,3 +56,4 @@ var beta = 0.8;
 var specularShininess = Math.pow( 2, alpha * 10 );
 var specularColor = new THREE.Color( beta * 0.2, beta * 0.2, beta * 0.2 );
 var diffuseColor = new THREE.Color(0.1,0.1,0.1);
+var test = document.querySelector('#test');
