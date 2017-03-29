@@ -936,9 +936,6 @@ function createData() {
       if (!monthsArray.includes(month.location)) {
         monthsArray.push(month.location);
       }
-      // console.log(pollution);
-      // console.log(`location: ${month.location}, date: ${month.date}, no levels: ${month.no}, no2 levels: ${month.no2}, nox levels: ${month.nox}`);
-      // console.log(month);
       no = month.no/20;
       no2 = month.no2/20;
       nox = month.nox/20;
