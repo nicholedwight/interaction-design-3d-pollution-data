@@ -5,7 +5,6 @@
   const monthsUl = document.querySelector(".range-labels")
 
   slider.addEventListener('change', activateLabel);
-  slider.addEventListener('change', changeSliderValue);
   monthsUl.addEventListener('click', changeSliderValue);
 
   // Check to see if any labels are already active and if so, deactivate them

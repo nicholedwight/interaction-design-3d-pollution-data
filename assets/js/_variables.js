@@ -41,7 +41,7 @@ var scalesArray = [
 var positionsArray = [
   {x: 850, y: 110.2, z: 250}, // brislington
   {x: 990, y: 233.453196750264, z: -250}, // fishponds
-  {x: -530, y: 276.307907627712, z: -600}, //newfoundland
+  {x: -500, y: 276.307907627712, z: -600}, //newfoundland
   {x: 300, y: 212.166835528538, z: 350}, // parsons
   {x: 380, y: 440.81266490766, z: 100}, // rupert
   {x: 850, y: 261.30006930007, z: 600} // well

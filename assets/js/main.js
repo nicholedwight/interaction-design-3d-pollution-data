@@ -30,10 +30,10 @@ var container, stats;
 				var aspect = window.innerWidth / window.innerHeight;
 				var d = 4000;
 				camera = new THREE.OrthographicCamera(
-					window.innerWidth / - 0.9,
-					window.innerWidth / 0.9,
-					window.innerHeight / 0.9,
-					window.innerHeight / - 0.9,
+					window.innerWidth / - 0.7,
+					window.innerWidth / 0.7,
+					window.innerHeight / 0.7,
+					window.innerHeight / - 0.7,
 					- 1000, //near
 					6000  // far
 				);
